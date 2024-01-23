@@ -6,9 +6,23 @@
                 <style>
                         body { margin: 0; }
                 </style>
-          <script type="module" crossorigin src="./assets/index-5xTHPsES.js"></script>
+		<script type="module" crossorigin src="./assets/index-5xTHPsES.js"></script>
+		<script> 
+		  function playPause(myVideo) { 
+		      if (myVideo.paused) 
+			  myVideo.play(); 
+		      else 
+			  myVideo.pause(); 
+		  } 
+		</script>
         </head>
         <body>
+	  <div style="position: absolute; border-radius: 150px; border:2px solid #555555; overflow:hidden; margin: 20px;">
+	    <video id="myvideo" width="320" height="425" onclick="playPause(this)">
+	      <source src="movie.mp4" type="video/mp4">
+	      Your browser does not support the video tag.
+	    </video>
+	  </div>
         </body>
 </html>
 
